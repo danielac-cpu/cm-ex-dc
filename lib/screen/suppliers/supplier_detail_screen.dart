@@ -7,8 +7,9 @@ class SupplierDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final it =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
-    if (it == null)
+    if (it == null) {
       return const Scaffold(body: Center(child: Text('Sin datos')));
+    }
 
     final name = (it['provider_name'] ?? '').toString();
     final last = (it['provider_last_name'] ?? '').toString();

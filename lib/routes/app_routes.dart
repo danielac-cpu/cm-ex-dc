@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screen/auth/login_screen.dart';
+import '../screen/auth/register_screen.dart';
 import '../screen/home/home_screen.dart';
 import '../screen/products/products_list_screen.dart';
 import '../screen/products/product_edit_screen.dart';
@@ -13,6 +14,7 @@ import '../screen/suppliers/supplier_detail_screen.dart';
 
 class AppRoutes {
   static const login = '/login';
+  static const register = '/register';
   static const home = '/home';
 
   static const products = '/products';
@@ -29,6 +31,7 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> routes = {
     login: (_) => const LoginScreen(),
+    register: (_) => const RegisterScreen(),
     home: (_) => const HomeScreen(),
 
     products: (_) => const ProductsListScreen(),

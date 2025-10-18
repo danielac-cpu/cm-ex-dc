@@ -110,7 +110,7 @@ class _SupplierEditScreenState extends State<SupplierEditScreen> {
                   ),
                   const SizedBox(height: 12),
                   DropdownButtonFormField<String>(
-                    value: _state,
+                    initialValue: _state,
                     decoration: const InputDecoration(labelText: 'Estado'),
                     items: const [
                       DropdownMenuItem(value: 'Activo', child: Text('Activo')),

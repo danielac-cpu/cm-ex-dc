@@ -15,7 +15,9 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => context.read<ProductsProvider>().load());
+    Future.microtask(() {
+      if (mounted) context.read<ProductsProvider>().load();
+    });
   }
 
   @override
@@ -107,7 +109,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                           ],
                         ),
                       );
-                      if (ok == true && id != null) {
+                      if (ok == true && id != null && mounted) {
                         await context.read<ProductsProvider>().delete(id);
                       }
                     },

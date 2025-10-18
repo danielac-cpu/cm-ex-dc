@@ -83,5 +83,4 @@ class DefaultFirebaseOptions {
     authDomain: 'cm-ex-dc.firebaseapp.com',
     storageBucket: 'cm-ex-dc.firebasestorage.app',
   );
-
 }

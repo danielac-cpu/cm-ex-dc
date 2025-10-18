@@ -7,8 +7,9 @@ class CategoryDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final it =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
-    if (it == null)
+    if (it == null) {
       return const Scaffold(body: Center(child: Text('Sin datos')));
+    }
 
     final name = (it['category_name'] ?? '').toString();
     final state = (it['category_state'] ?? 'Activa').toString();

@@ -15,7 +15,9 @@ class _CategoriesListScreenState extends State<CategoriesListScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => context.read<CategoriesProvider>().load());
+    Future.microtask(() {
+      if (mounted) context.read<CategoriesProvider>().load();
+    });
   }
 
   @override
@@ -101,7 +103,7 @@ class _CategoriesListScreenState extends State<CategoriesListScreen> {
                           ],
                         ),
                       );
-                      if (ok == true && id != null) {
+                      if (ok == true && id != null && mounted) {
                         await context.read<CategoriesProvider>().delete(id);
                       }
                     },

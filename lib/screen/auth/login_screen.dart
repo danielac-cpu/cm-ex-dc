@@ -122,6 +122,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: _forgotPassword,
                     child: const Text('¿Olvidaste tu contraseña?'),
                   ),
+                  const SizedBox(height: 8),
+                  OutlinedButton.icon(
+                    onPressed: () =>
+                        Navigator.pushNamed(context, AppRoutes.register),
+                    icon: const Icon(Icons.person_add_outlined),
+                    label: const Text('Crear cuenta nueva'),
+                  ),
                 ],
               ),
             ),

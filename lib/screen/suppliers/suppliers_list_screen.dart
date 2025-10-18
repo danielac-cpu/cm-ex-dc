@@ -15,7 +15,9 @@ class _SuppliersListScreenState extends State<SuppliersListScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => context.read<SuppliersProvider>().load());
+    Future.microtask(() {
+      if (mounted) context.read<SuppliersProvider>().load();
+    });
   }
 
   @override
@@ -106,7 +108,7 @@ class _SuppliersListScreenState extends State<SuppliersListScreen> {
                           ],
                         ),
                       );
-                      if (ok == true && id != null) {
+                      if (ok == true && id != null && mounted) {
                         await context.read<SuppliersProvider>().delete(id);
                       }
                     },

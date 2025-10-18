@@ -118,7 +118,7 @@ class _ProductEditScreenState extends State<ProductEditScreen> {
                   if (isEdit) ...[
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
-                      value: _state,
+                      initialValue: _state,
                       decoration: const InputDecoration(labelText: 'Estado'),
                       items: const [
                         DropdownMenuItem(
