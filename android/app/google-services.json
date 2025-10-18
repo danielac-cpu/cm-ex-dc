@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "663591440131",
+    "project_id": "cm-ex-dc",
+    "storage_bucket": "cm-ex-dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663591440131:android:34aecc9edd477e42532336",
+        "android_client_info": {
+          "package_name": "com.example.cm_ex_dc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChVclamps5X1lvMeVlqkw7AHHnhP9tHiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
